@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function tower(n,src,dest,inter){
+                if(n===1){
+                    console.log(`Move disk 1 from ${src} to ${dest}`);
+                    return;
+                }
+                tower(n-1,src,inter,dest)
+                    console.log(`Move disk ${n} from ${src} to ${dest}`);
+                
+                tower(n-1,inter,dest,src);
+            }
+            tower(4,'A','B','C','D');
+        </script>
+    </body>
+</html>
